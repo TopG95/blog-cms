@@ -39,9 +39,9 @@ async function getPost(slug:string) {
 }
 
 const page = async ({params}: Params) => { 
-  console.log(params, 'params')
+  
   const post: Post = await getPost(params?.slug)
-  console.log(post, 'post')
+  
   return (
     <div>
       <Header title={post?.title}/>
