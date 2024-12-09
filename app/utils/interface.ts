@@ -3,7 +3,7 @@
     slug: { current: string };
     publishedAt: string;
     excerpt: string;
-    body: any;
+    body: string;
     tags: Array<Tag>;
     _id: string;
   }
