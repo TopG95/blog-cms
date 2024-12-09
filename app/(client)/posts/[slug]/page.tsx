@@ -14,7 +14,6 @@ const dateFont = VT323({weight: "400", subsets: ["latin"]})
 interface Params {
   params: {
     slug: string;
-    body: string;
   }
 }
 
