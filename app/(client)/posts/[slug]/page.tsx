@@ -2,7 +2,7 @@
 import { Post } from '@/app/utils/interface';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
-import { Any, PortableText } from 'next-sanity';
+import { PortableText } from 'next-sanity';
 import { VT323 } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -73,7 +73,7 @@ const page = async ({params}: Params) => {
 export default page;
 const myPortableTextComponents = {
   types: {
-    image: ({ value }: Any) => (
+    image: ({ value }: any) => (
     <Image
     src={urlFor(value).url()}
     alt='Post'
