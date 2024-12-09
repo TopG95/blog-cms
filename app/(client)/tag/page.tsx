@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const page = async () => {
   const tags: Tag[] = await getAllTags();
-  console.log(tags, "tags");
+  
   return (
     <div>
       <Header title="Tags" />
