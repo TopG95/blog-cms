@@ -14,6 +14,7 @@ const dateFont = VT323({weight: "400", subsets: ["latin"]})
 interface Params {
   params: {
     slug: string;
+    value: string
   }
 }
 
@@ -29,7 +30,7 @@ async function getPost(slug:string) {
   tags[]-> {
   _id,
   slug,
-  name
+  name,
   }
   }
   `;
@@ -70,10 +71,11 @@ const page = async ({params}: Params) => {
   )
 }
 
+
 export default page;
 const myPortableTextComponents = {
   types: {
-    image: ({ value }: any) => (
+    image: (value: any) => (
     <Image
     src={urlFor(value).url()}
     alt='Post'
