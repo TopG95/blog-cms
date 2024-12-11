@@ -75,7 +75,7 @@ const page = async ({params}: Params) => {
 export default page;
 const myPortableTextComponents = {
   types: {
-    image: (value: any) => (
+    image: ({ value }: any ) => (
     <Image
     src={urlFor(value).url()}
     alt='Post'
