@@ -2,7 +2,7 @@ import {client } from '@/sanity/lib/client'
 import Header from '../components/Header';
 import { Post } from '../utils/interface';
 import PostComponent from '../components/PostComponent';
-import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+
 
 async function getPosts() {
   const query = `*[_type== "post"] {
