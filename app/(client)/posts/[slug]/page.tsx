@@ -1,4 +1,5 @@
-﻿import Header from '@/app/components/Header'
+﻿import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import Header from '@/app/components/Header'
 import { Post } from '@/app/utils/interface';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
@@ -17,6 +18,7 @@ interface Params {
     value: string
   }
 }
+interface PortableImageType { value: SanityImageSource;}
 
 async function getPost(slug:string) {
   const query = `
@@ -75,7 +77,7 @@ const page = async ({params}: Params) => {
 export default page;
 const myPortableTextComponents = {
   types: {
-    image: ({ value }: any ) => (
+    image: ({ value }: PortableImageType ) => (
     <Image
     src={urlFor(value).url()}
     alt='Post'

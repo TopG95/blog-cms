@@ -9,6 +9,7 @@
 
 import { NextStudio } from 'next-sanity/studio'
 import config from '../../../../sanity.config'
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 export const dynamic = 'force-static'
 
